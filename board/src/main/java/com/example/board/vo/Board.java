@@ -1,15 +1,18 @@
-package com.example.board.domain;
+package com.example.board.vo;
 
 
 import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 //@Entity: 테이블과 링크될 클래스를 나타냄
-//@NoArgsConstructor = 기본생성자 자동 추가, 생성자 protected Board()와 동일
+//@NoArgsConstructor = 기본생성자 자동 추가
+@NoArgsConstructor
+@Getter
 @Entity
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Board {
     //@Id : PK
     //@GeneratedValue: PK 생성 규약
@@ -24,27 +27,9 @@ public class Board {
     @Column(nullable = false)
     private String content;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
+    @Builder
+    public Board(String title, String content){
         this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
         this.content = content;
     }
 
