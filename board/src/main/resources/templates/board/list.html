@@ -36,6 +36,7 @@
                         <th>ID</th>
                         <th>제목</th>
                         <th>내용</th>
+                        <th>등록일</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -46,6 +47,9 @@
                         </td>
                         <td>
                             <a th:text="${item.content}"></a>
+                        </td>
+                        <td>
+                            <a th:text="${#temporals.format(item.createDate,'yyyy-MM-dd hh:mm')}"></a>
                         </td>
                     </tr>
                     </tbody>

@@ -7,13 +7,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.format.DateTimeFormatter;
 
 //@Entity: 테이블과 링크될 클래스를 나타냄
 //@NoArgsConstructor = 기본생성자 자동 추가
 @NoArgsConstructor
 @Getter
 @Entity
-public class Board {
+public class Board extends BaseTimeEntity {
     //@Id : PK
     //@GeneratedValue: PK 생성 규약
     @Id
@@ -27,8 +28,9 @@ public class Board {
     @Column(nullable = false)
     private String content;
 
+
     @Builder
-    public Board(String title, String content){
+    public Board(String title, String content) {
         this.title = title;
         this.content = content;
     }
