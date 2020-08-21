@@ -2,7 +2,7 @@ package com.example.board.service;
 
 import com.example.board.domain.Board;
 import com.example.board.repository.BoardRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -10,14 +10,14 @@ import java.util.List;
 
 @Transactional
 @Service
+@AllArgsConstructor
 public class BoardService {
 
-    private final BoardRepository boardRepository;
+    private BoardRepository boardRepository;
 
-    @Autowired
-    public BoardService(BoardRepository boardRepository) {
-        this.boardRepository = boardRepository;
-    }
+//    public BoardService(BoardRepository boardRepository) {
+//        this.boardRepository = boardRepository;
+//    }
 
     public List<Board> getAllList() {
         return boardRepository.findAll();

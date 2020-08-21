@@ -2,24 +2,24 @@ package com.example.board.controller;
 
 import com.example.board.domain.Board;
 import com.example.board.service.BoardService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
+
 @Controller
+@AllArgsConstructor
 public class BoardController {
     private BoardService boardService;
 
-    @Autowired
-    public BoardController(BoardService boardService) {
-        this.boardService = boardService;
-    }
+//    public BoardController(BoardService boardService) {
+//        this.boardService = boardService;
+//    }
 
     /**
      * 메인 게시글 조회
