@@ -1,8 +1,8 @@
 package com.example.board.service;
 
 
-import com.example.board.repository.MemberRepository;
-import com.example.board.vo.Member;
+import com.example.board.repository.UserRepository;
+import com.example.board.vo.User;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,14 +12,14 @@ import java.util.List;
 @Transactional
 @Service
 @AllArgsConstructor
-public class MemberService {
-    private MemberRepository memberRepository;
+public class UserService {
+    private UserRepository memberRepository;
 
-    public void createMember(Member member){
+    public void createMember(User member){
         memberRepository.save(member);
     }
 
-    public List<Member> memberList(){
+    public List<User> getUserList(){
         return memberRepository.findAll();
     }
 

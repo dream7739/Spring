@@ -9,10 +9,10 @@ import javax.persistence.*;
 @Entity
 @Getter
 @NoArgsConstructor
-public class Member extends BaseTimeEntity{
+public class User extends BaseTimeEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Long id;
+    private long id;
 
     @Column(nullable = false)
     private String name;
@@ -24,7 +24,7 @@ public class Member extends BaseTimeEntity{
     private String passwd;
 
     @Builder
-    public Member(String name, String email, String passwd) {
+    public User(String name, String email, String passwd) {
         this.name = name;
         this.email = email;
         this.passwd = passwd;

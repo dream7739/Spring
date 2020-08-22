@@ -1,7 +1,6 @@
 package com.example.board.dto;
 
-import com.example.board.vo.Member;
-import lombok.Builder;
+import com.example.board.vo.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,13 +8,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class MemberDto {
+public class UserDto {
     private String name;
     private String email;
     private String passwd;
 
-    public Member toEntity(){
-        return Member.builder()
+    public User toEntity(){
+        return User.builder()
                 .name(name)
                 .email(email)
                 .passwd(passwd)

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Board List</title>
+    <title>User List</title>
 </head>
 <body>
 <div class="container">
@@ -35,7 +35,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="item : ${members}">
+                <tr th:each="item : ${users}">
                     <td>
                         <a th:text="${item.name}" ></a>
                     </td>
