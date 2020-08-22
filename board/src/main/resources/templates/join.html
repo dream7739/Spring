@@ -16,7 +16,7 @@
               integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
               crossorigin="anonymous">
 
-        <title>Board Create</title>
+        <title>Join</title>
     </head>
 <body>
 <div class="container">
@@ -24,19 +24,23 @@
         <div class="col-8 col-offset-4">
             <br/>
             <br/>
-            <h2>게시글 작성</h2>
+            <h2>회원가입</h2>
             <br/>
-            <form action="/board/create" method="post">
+            <form action="/join" method="post">
                 <div class="form-group">
-                    <label for="title">제목</label>
-                    <input type="text" id="title" name="title" class="form-control">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="content">내용</label>
-                    <textarea id="content" name="content" class="form-control" rows="10"></textarea>
+                    <label for="email">이메일</label>
+                    <input type="text" id="email" name="email" class="form-control">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">글작성</button>
+                    <label for="passwd">비밀번호</label>
+                    <input type="text" id="passwd" name="passwd" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">확인</button>
                     <a href="/" class="btn btn-danger">취소</a>
                 </div>
             </form>

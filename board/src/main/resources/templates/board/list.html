@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Simple Board - list</title>
+    <title>Board List</title>
 </head>
 <body>
 <div class="container">
@@ -49,7 +49,7 @@
                             <a th:text="${item.content}"></a>
                         </td>
                         <td>
-                            <a th:text="${#temporals.format(item.createDate,'yyyy-MM-dd hh:mm')}"></a>
+                            <a th:text="${#temporals.format(item.createDate,'yyyy-MM-dd HH:mm')}"></a>
                         </td>
                     </tr>
                     </tbody>
