@@ -29,7 +29,6 @@ logs/*
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
 
 ### VS Code ###
 .vscode/
@@ -37,11 +36,9 @@ build/
 application.yml
 *.yml
 application.properties
-*.jar
 out/
 target/
-build/
-gradle/
+
 
 logs/*
 *.log
