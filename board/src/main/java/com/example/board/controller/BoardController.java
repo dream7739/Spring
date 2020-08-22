@@ -37,7 +37,7 @@ public class BoardController {
      */
     @GetMapping("/board/create")
     public String createBoardMain() {
-        return "/board/create";
+        return "board/create";
     }
 
 
